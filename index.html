@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TimG — Developer • Community Owner • FiveM Creator</title>
+  <meta name="description" content="TimG — Full-Stack Developer, Community Owner & FiveM Creator. Portfolio & Community Hub.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loader" class="loader">
+    <div class="loader-content">
+      <div class="loader-logo">TimG</div>
+      <div class="loader-bar"><div class="loader-progress"></div></div>
+    </div>
+  </div>
+
+  <!-- Cursor Trail -->
+  <div id="cursor-trail"></div>
+
+  <!-- Particle Canvas -->
+  <canvas id="particles"></canvas>
+
+  <!-- Navigation -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">Tim<span class="accent">G</span></a>
+      <div class="nav-links" id="navLinks">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#socials" class="nav-link">Socials</a>
+        <a href="#discord" class="nav-link">Discord</a>
+        <a href="#contact" class="nav-link">Kontakt</a>
+      </div>
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        <button class="nav-burger" id="navBurger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#skills" class="mobile-link">Skills</a>
+    <a href="#projects" class="mobile-link">Projects</a>
+    <a href="#socials" class="mobile-link">Socials</a>
+    <a href="#discord" class="mobile-link">Discord</a>
+    <a href="#contact" class="mobile-link">Kontakt</a>
+  </div>
+
+  <main>
+    <!-- ===== 1. HERO SECTION ===== -->
+    <section id="hero" class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content reveal">
+        <div class="hero-logo-wrap">
+          <h1 class="hero-logo">Tim<span class="accent">G</span></h1>
+          <div class="hero-glow"></div>
+        </div>
+        <p class="hero-subtitle">Developer <span class="dot">•</span> Community Owner <span class="dot">•</span> FiveM Creator</p>
+        <div class="hero-buttons">
+          <a href="https://discord.gg/jP4dVz4aAG" target="_blank" rel="noopener" class="btn btn-primary">
+            <i class="fab fa-discord"></i> Discord Join
+          </a>
+          <a href="#projects" class="btn btn-secondary">
+            <i class="fas fa-folder-open"></i> Projects ansehen
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="fas fa-envelope"></i> Kontakt
+          </a>
+        </div>
+        <div class="hero-scroll-indicator">
+          <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+          <span>Scroll down</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 2. ABOUT ME ===== -->
+    <section id="about" class="section about">
+      <div class="container">
+        <h2 class="section-title reveal">
+          <span class="title-accent">//</span> About Me
+        </h2>
+        <div class="about-grid reveal">
+          <div class="about-card glass-card">
+            <div class="about-avatar">
+              <div class="avatar-ring"></div>
+              <div class="avatar-text">TG</div>
+            </div>
+            <div class="about-text">
+              <p>Hey, ich bin <strong>TimG</strong> — Full-Stack Developer, Community Owner und leidenschaftlicher Creator im Gaming- und Tech-Bereich.</p>
+              <p>Ich entwickle <strong>FiveM Server</strong>, baue leistungsstarke <strong>Discord Bots</strong> und erstelle moderne <strong>Web-Applikationen</strong>. Meine Leidenschaft liegt darin, Technologie und Community zu verbinden.</p>
+              <p>Als Gründer der <strong>TG Community</strong> bringe ich Spieler, Entwickler und Kreative zusammen — mit dem Ziel, etwas Einzigartiges zu schaffen.</p>
+            </div>
+          </div>
+          <div class="about-highlights">
+            <div class="highlight-card glass-card reveal-delay-1">
+              <div class="highlight-icon"><i class="fas fa-gamepad"></i></div>
+              <h3>FiveM Projekte</h3>
+              <p>Custom Scripts, Server-Entwicklung und Roleplay-Systeme</p>
+            </div>
+            <div class="highlight-card glass-card reveal-delay-2">
+              <div class="highlight-icon"><i class="fab fa-discord"></i></div>
+              <h3>Discord Bots</h3>
+              <p>Maßgeschneiderte Bots für Moderation, Musik & Community Features</p>
+            </div>
+            <div class="highlight-card glass-card reveal-delay-3">
+              <div class="highlight-icon"><i class="fas fa-code"></i></div>
+              <h3>Web Development</h3>
+              <p>Moderne Websites & Web-Apps mit aktuellen Technologien</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. CODING SKILLS ===== -->
+    <section id="skills" class="section skills">
+      <div class="container">
+        <h2 class="section-title reveal">
+          <span class="title-accent">//</span> Coding Skills
+        </h2>
+        <div class="skills-grid reveal">
+          <div class="skill-card glass-card" data-skill="92">
+            <div class="skill-icon"><i class="fab fa-js-square"></i></div>
+            <h3>JavaScript</h3>
+            <div class="skill-bar"><div class="skill-fill" style="--fill: 92%"></div></div>
+            <span class="skill-level">Expert</span>
+          </div>
+          <div class="skill-card glass-card" data-skill="85">
+            <div class="skill-icon"><i class="fas fa-code"></i></div>
+            <h3>TypeScript</h3>
+            <div class="skill-bar"><div class="skill-fill" style="--fill: 85%"></div></div>
+            <span class="skill-level">Advanced</span>
+          </div>
+          <div class="skill-card glass-card" data-skill="95">
+            <div class="skill-icon"><i class="fab fa-html5"></i></div>
+            <h3>HTML / CSS</h3>
+            <div class="skill-bar"><div class="skill-fill" style="--fill: 95%"></div></div>
+            <span class="skill-level">Expert</span>
+          </div>
+          <div class="skill-card glass-card" data-skill="88">
+            <div class="skill-icon"><i class="fab fa-node-js"></i></div>
+            <h3>Node.js</h3>
+            <div class="skill-bar"><div class="skill-fill" style="--fill: 88%"></div></div>
+            <span class="skill-level">Advanced</span>
+          </div>
+          <div class="skill-card glass-card" data-skill="78">
+            <div class="skill-icon"><i class="fab fa-react"></i></div>
+            <h3>React</h3>
+            <div class="skill-bar"><div class="skill-fill" style="--fill: 78%"></div></div>
+            <span class="skill-level">Proficient</span>
+          </div>
+          <div class="skill-card glass-card" data-skill="90">
+            <div class="skill-icon"><i class="fas fa-moon"></i></div>
+            <h3>Lua (FiveM)</h3>
+            <div class="skill-bar"><div class="skill-fill" style="--fill: 90%"></div></div>
+            <span class="skill-level">Expert</span>
+          </div>
+          <div class="skill-card glass-card" data-skill="87">
+            <div class="skill-icon"><i class="fab fa-discord"></i></div>
+            <h3>Discord.js</h3>
+            <div class="skill-bar"><div class="skill-fill" style="--fill: 87%"></div></div>
+            <span class="skill-level">Advanced</span>
+          </div>
+          <div class="skill-card glass-card" data-skill="82">
+            <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+            <h3>Git / GitHub</h3>
+            <div class="skill-bar"><div class="skill-fill" style="--fill: 82%"></div></div>
+            <span class="skill-level">Advanced</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. PROJECTS ===== -->
+    <section id="projects" class="section projects">
+      <div class="container">
+        <h2 class="section-title reveal">
+          <span class="title-accent">//</span> Projekte
+        </h2>
+
+        <div class="projects-category reveal">
+          <h3 class="category-title"><i class="fas fa-fire"></i> Aktive Projekte</h3>
+          <div class="projects-grid">
+            <div class="project-card glass-card">
+              <div class="project-status active">Active</div>
+              <div class="project-icon"><i class="fas fa-car"></i></div>
+              <h4>RevolutionV Roleplay</h4>
+              <p>Ein einzigartiger FiveM Roleplay Server mit custom Scripts, eigenem Framework und einer aktiven Community.</p>
+              <div class="project-tags">
+                <span>FiveM</span><span>Lua</span><span>JavaScript</span>
+              </div>
+            </div>
+            <div class="project-card glass-card">
+              <div class="project-status active">Active</div>
+              <div class="project-icon"><i class="fab fa-discord"></i></div>
+              <h4>TG Community Discord</h4>
+              <p>Der zentrale Hub für die TG Community — Events, Support, Gaming Sessions und Developer-Austausch.</p>
+              <div class="project-tags">
+                <span>Discord</span><span>Community</span><span>Events</span>
+              </div>
+            </div>
+            <div class="project-card glass-card">
+              <div class="project-status active">Active</div>
+              <div class="project-icon"><i class="fas fa-robot"></i></div>
+              <h4>Discord Bots</h4>
+              <p>Custom Discord Bots für Moderation, Ticket-Systeme, Musik und Community-Management.</p>
+              <div class="project-tags">
+                <span>Discord.js</span><span>Node.js</span><span>API</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects-category reveal">
+          <h3 class="category-title"><i class="fas fa-archive"></i> Vergangene Projekte</h3>
+          <div class="projects-grid">
+            <div class="project-card glass-card archived">
+              <div class="project-status archived-badge">Archived</div>
+              <div class="project-icon"><i class="fas fa-server"></i></div>
+              <h4>Legacy RP Server</h4>
+              <p>Ein früherer FiveM Server mit eigenem Wirtschaftssystem und Fraktionen — Grundlage für RevolutionV.</p>
+              <div class="project-tags">
+                <span>FiveM</span><span>Lua</span>
+              </div>
+            </div>
+            <div class="project-card glass-card archived">
+              <div class="project-status archived-badge">Archived</div>
+              <div class="project-icon"><i class="fas fa-tools"></i></div>
+              <h4>Community Tools</h4>
+              <p>Verschiedene Hilfsmittel und Utilities für Server-Administration und Community-Management.</p>
+              <div class="project-tags">
+                <span>Node.js</span><span>Tools</span>
+              </div>
+            </div>
+            <div class="project-card glass-card archived">
+              <div class="project-status archived-badge">Archived</div>
+              <div class="project-icon"><i class="fas fa-robot"></i></div>
+              <h4>Alte Bot Versionen</h4>
+              <p>Frühere Discord Bot Iterationen — Features wurden in aktuelle Bots integriert.</p>
+              <div class="project-tags">
+                <span>Discord.js</span><span>Legacy</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. SOCIALS ===== -->
+    <section id="socials" class="section socials">
+      <div class="container">
+        <h2 class="section-title reveal">
+          <span class="title-accent">//</span> Socials
+        </h2>
+        <div class="socials-grid reveal">
+          <a href="https://www.tiktok.com/@tim.k_0" target="_blank" rel="noopener" class="social-card glass-card">
+            <i class="fab fa-tiktok"></i>
+            <span>TikTok</span>
+            <div class="social-glow"></div>
+          </a>
+          <a href="https://www.instagram.com/tim31k/" target="_blank" rel="noopener" class="social-card glass-card">
+            <i class="fab fa-instagram"></i>
+            <span>Instagram</span>
+            <div class="social-glow"></div>
+          </a>
+          <a href="https://discord.gg/jP4dVz4aAG" target="_blank" rel="noopener" class="social-card glass-card">
+            <i class="fab fa-discord"></i>
+            <span>Discord</span>
+            <div class="social-glow"></div>
+          </a>
+          <a href="https://github.com" target="_blank" rel="noopener" class="social-card glass-card">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+            <div class="social-glow"></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. DISCORD INTEGRATION ===== -->
+    <section id="discord" class="section discord-section">
+      <div class="container">
+        <h2 class="section-title reveal">
+          <span class="title-accent">//</span> Discord Status
+        </h2>
+        <div class="discord-grid reveal">
+          <div class="discord-status-card glass-card">
+            <div class="discord-avatar">
+              <div class="avatar-ring pulse-ring"></div>
+              <div class="avatar-text-sm">TG</div>
+            </div>
+            <div class="discord-info">
+              <h3>TimG</h3>
+              <div class="status-indicator">
+                <span class="status-dot online"></span>
+                <span id="discordStatus">Online</span>
+              </div>
+              <p class="discord-activity" id="discordActivity">Coding something cool...</p>
+            </div>
+          </div>
+          <div class="discord-server-card glass-card">
+            <div class="server-header">
+              <i class="fab fa-discord"></i>
+              <h3>TG Community</h3>
+            </div>
+            <div class="server-stats">
+              <div class="stat">
+                <span class="stat-number" id="memberCount">150+</span>
+                <span class="stat-label">Members</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number online-count" id="onlineCount">25+</span>
+                <span class="stat-label">Online</span>
+              </div>
+            </div>
+            <a href="https://discord.gg/jP4dVz4aAG" target="_blank" rel="noopener" class="btn btn-discord">
+              <i class="fab fa-discord"></i> Server beitreten
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 7. CONTACT ===== -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2 class="section-title reveal">
+          <span class="title-accent">//</span> Kontakt
+        </h2>
+        <div class="contact-content reveal">
+          <div class="contact-card glass-card">
+            <p>Interesse an einer Zusammenarbeit oder Fragen? Erreichbar über Discord oder Social Media.</p>
+            <div class="contact-buttons">
+              <a href="https://discord.gg/jP4dVz4aAG" target="_blank" rel="noopener" class="btn btn-primary">
+                <i class="fab fa-discord"></i> Discord
+              </a>
+              <a href="https://www.instagram.com/tim31k/" target="_blank" rel="noopener" class="btn btn-secondary">
+                <i class="fab fa-instagram"></i> Instagram
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== 8. FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="footer-logo">Tim<span class="accent">G</span></span>
+          <p>Developer • Community Owner • Creator</p>
+        </div>
+        <div class="footer-socials">
+          <a href="https://www.tiktok.com/@tim.k_0" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a href="https://www.instagram.com/tim31k/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://discord.gg/jP4dVz4aAG" target="_blank" rel="noopener" aria-label="Discord"><i class="fab fa-discord"></i></a>
+          <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="footer-copy">
+          <p>&copy; 2026 TimG. All rights reserved.</p>
+          <p class="footer-built">Built with <span class="accent">&lt;/&gt;</span> by TimG</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
